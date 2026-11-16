@@ -64,19 +64,19 @@
 
     function renderSuggestions(suggestions, client) {
         list.textContent = '';
-        const pending = suggestions.filter(function (suggestion) {
+        const pendingSuggestions = suggestions.filter(function (suggestion) {
             return suggestion.status === 'pending';
-        }).length;
+        });
         count.textContent = tr('adminSuggestions.pendingCount', 'Ожидают проверки: {count}', {
-            count: String(pending)
+            count: String(pendingSuggestions.length)
         });
 
-        if (!suggestions.length) {
+        if (!pendingSuggestions.length) {
             list.appendChild(createText('p', 'form-note', tr('adminSuggestions.empty', 'Новых предложений пока нет.')));
             return;
         }
 
-        suggestions.forEach(function (suggestion) {
+        pendingSuggestions.forEach(function (suggestion) {
             const card = document.createElement('article');
             card.className = 'suggestion-inbox-card';
             const alreadyPublished = suggestion.status === 'pending' &&
