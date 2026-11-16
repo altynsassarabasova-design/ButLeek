@@ -154,6 +154,21 @@
         });
     }
 
+    function removeReviewedSuggestion(button) {
+        const card = button.closest('.suggestion-inbox-card');
+        if (!card) return;
+
+        card.remove();
+        const pendingCount = list.querySelectorAll('.suggestion-inbox-card').length;
+        count.textContent = tr('adminSuggestions.pendingCount', 'Ожидают проверки: {count}', {
+            count: String(pendingCount)
+        });
+
+        if (!pendingCount) {
+            list.appendChild(createText('p', 'form-note', tr('adminSuggestions.empty', 'Новых предложений пока нет.')));
+        }
+    }
+
     async function loadSuggestions(client) {
         refresh.disabled = true;
         status.className = 'form-message';
@@ -204,6 +219,8 @@
             if (decision === 'approved' && !data) {
                 throw new Error('The approved tool was not returned by the database.');
             }
+
+            removeReviewedSuggestion(button);
 
             let catalogReloaded = true;
             if (decision === 'approved' && window.butleekReloadApprovedTools) {
