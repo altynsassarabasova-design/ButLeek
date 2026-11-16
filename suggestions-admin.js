@@ -163,6 +163,7 @@
             const { data, error } = await client
                 .from('tool_suggestions')
                 .select('id, name, category, website, description, reason, status, created_at')
+                .eq('status', 'pending')
                 .order('created_at', { ascending: false })
                 .limit(100);
             if (error) throw error;
