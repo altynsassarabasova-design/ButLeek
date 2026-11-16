@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10384d">
+    <title>Настройки — But|Leek</title>
+    <link rel="icon" href="iconb.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+    <header class="app-header">
+        <a class="brand" href="main.html" draggable="false"><img class="brand-mark" src="iconb.jpeg" alt="" draggable="false">But|Leek</a>
+        <label class="search-box">
+            <span class="sr-only" data-i18n="search.label">Поиск</span>
+            <input type="search" placeholder="Поиск библиотек, фреймворков, инструментов" data-i18n-placeholder="search.placeholder">
+        </label>
+        <nav class="header-links" aria-label="Дополнительная навигация" data-i18n-aria-label="nav.secondary">
+            <a class="profile-button" href="profile.html" data-i18n="nav.profile">Мой профиль</a>
+        </nav>
+    </header>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <p class="sidebar-caption" data-i18n="nav.library">Библиотека</p>
+            <nav class="side-nav" aria-label="Основная навигация" data-i18n-aria-label="nav.primary">
+                <a href="main.html" data-i18n="nav.feed">Лента</a>
+                <a href="main.html#catalog" data-i18n="nav.catalog">Каталог</a>
+                <a href="main.html#collections" data-i18n="nav.collections">Подборки</a>
+                <a href="main.html#favorites" data-i18n="nav.favorites">Избранное</a>
+                <a href="main.html#compare" data-i18n="nav.compare">Сравнение</a>
+                <a href="main.html#add-tool" data-i18n="nav.suggest">Предложить инструмент</a>
+                <a class="active" href="settings.html" data-i18n="nav.settings">Настройки</a>
+            </nav>
+        </aside>
+        <main class="app-content settings-content">
+            <h1 class="page-title" data-i18n="settings.title">Настройки</h1>
+            <p class="page-description" data-i18n="settings.description">Выберите тему и язык интерфейса.</p>
+            <form class="settings-card">
+                <label class="field settings-field">
+                    <span data-i18n="settings.theme">Тема</span>
+                    <select name="theme">
+                        <option value="light" data-i18n="theme.light">Светлая</option>
+                        <option value="dark" data-i18n="theme.dark">Тёмная</option>
+                        <option value="forest" data-i18n="theme.forest">Лесная</option>
+                        <option value="lavender" data-i18n="theme.lavender">Лавандовая</option>
+                        <option value="terracotta" data-i18n="theme.terracotta">Терракотовая</option>
+                        <option value="system" data-i18n="theme.system">Как в системе</option>
+                    </select>
+                </label>
+                <label class="field settings-field">
+                    <span data-i18n="settings.language">Язык интерфейса</span>
+                    <select name="language">
+                        <option value="ru">Русский</option>
+                        <option value="kk">Қазақша</option>
+                        <option value="en">English</option>
+                    </select>
+                </label>
+                <div class="settings-actions">
+                    <button class="button button-primary" type="submit" data-i18n="settings.save">Сохранить</button>
+                    <button class="button button-secondary" id="reset-settings" type="button" data-i18n="settings.reset">Сбросить</button>
+                </div>
+                <p class="form-message" id="settings-message" role="status" aria-live="polite"></p>
+            </form>
+        </main>
+    </div>
+    <script src="supabase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

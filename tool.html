@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10384d">
+    <meta name="description" content="Обзор инструмента, установка, основы настройки и советы разработчикам.">
+    <title>Инструмент — But|Leek</title>
+    <link rel="icon" href="iconb.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+    <header class="app-header">
+        <a class="brand" href="main.html" draggable="false"><img class="brand-mark" src="iconb.jpeg" alt="" draggable="false">But|Leek</a>
+        <label class="search-box">
+            <span class="sr-only" data-i18n="search.label">Поиск инструментов</span>
+            <input type="search" placeholder="Поиск библиотек, фреймворков, инструментов" data-i18n-placeholder="search.placeholder" autocomplete="off">
+        </label>
+        <nav class="header-links" aria-label="Дополнительная навигация" data-i18n-aria-label="nav.secondary">
+            <a class="profile-button" href="profile.html" data-i18n="nav.profile">Мой профиль</a>
+        </nav>
+    </header>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <p class="sidebar-caption" data-i18n="nav.library">Библиотека</p>
+            <nav class="side-nav" aria-label="Основная навигация" data-i18n-aria-label="nav.primary">
+                <a class="active" href="main.html" data-i18n="nav.feed">Лента</a>
+                <a href="main.html#catalog" data-i18n="nav.catalog">Каталог</a>
+                <a href="main.html#collections" data-i18n="nav.collections">Подборки</a>
+                <a href="main.html#favorites" data-i18n="nav.favorites">Избранное</a>
+                <a href="main.html#compare" data-i18n="nav.compare">Сравнение</a>
+                <a href="main.html#add-tool" data-i18n="nav.suggest">Предложить инструмент</a>
+                <a href="settings.html" data-i18n="nav.settings">Настройки</a>
+            </nav>
+        </aside>
+        <main class="app-content tool-detail-content">
+            <a class="back-link" href="main.html#catalog" data-i18n="tool.back">Вернуться в каталог</a>
+            <div id="tool-detail" aria-live="polite">
+                <p class="empty-note" data-i18n="tool.loading">Загружаем информацию об инструменте…</p>
+            </div>
+        </main>
+    </div>
+    <script src="supabase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+    <script src="tool.js"></script>
+</body>
+</html>

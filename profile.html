@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10384d">
+    <title>Аккаунт — But|Leek</title>
+    <link rel="icon" href="iconb.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+    <header class="app-header">
+        <a class="brand" href="main.html" draggable="false"><img class="brand-mark" src="iconb.jpeg" alt="" draggable="false">But|Leek</a>
+        <label class="search-box">
+            <span class="sr-only" data-i18n="search.label">Поиск</span>
+            <input type="search" placeholder="Поиск библиотек, фреймворков, инструментов" data-i18n-placeholder="search.placeholder">
+        </label>
+        <nav class="header-links" aria-label="Дополнительная навигация" data-i18n-aria-label="nav.secondary">
+            <a class="profile-button" href="profile.html" data-i18n="nav.profile">Мой профиль</a>
+        </nav>
+    </header>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <p class="sidebar-caption" data-i18n="nav.library">Библиотека</p>
+            <nav class="side-nav" aria-label="Основная навигация" data-i18n-aria-label="nav.primary">
+                <a href="main.html" data-i18n="nav.feed">Лента</a>
+                <a href="main.html#catalog" data-i18n="nav.catalog">Каталог</a>
+                <a href="main.html#collections" data-i18n="nav.collections">Подборки</a>
+                <a href="main.html#favorites" data-i18n="nav.favorites">Избранное</a>
+                <a href="main.html#compare" data-i18n="nav.compare">Сравнение</a>
+                <a href="main.html#add-tool" data-i18n="nav.suggest">Предложить инструмент</a>
+                <a href="settings.html" data-i18n="nav.settings">Настройки</a>
+            </nav>
+        </aside>
+        <main class="app-content profile-content">
+            <h1 class="page-title" id="profile-greeting" data-i18n="profile.title">Мой профиль</h1>
+            <p class="page-description" id="profile-summary" data-i18n="profile.summary">Расскажите о своём опыте и проектах — профиль станет полезнее для вас.</p>
+            <section class="profile-overview" aria-label="Ваша библиотека" data-i18n-aria-label="profile.library">
+                <a class="profile-stat-card" href="main.html#favorites">
+                    <span class="section-meta" data-i18n="profile.favorites">Избранное</span>
+                    <strong id="profile-favorites-count">0</strong>
+                    <span data-i18n="profile.local">На этом устройстве</span>
+                </a>
+                <a class="profile-stat-card" href="main.html#compare">
+                    <span class="section-meta" data-i18n="profile.compare">В сравнении</span>
+                    <strong id="profile-compare-count">0</strong>
+                    <span data-i18n="profile.continue">Продолжить выбор</span>
+                </a>
+            </section>
+            <form class="profile-card">
+                <h2 data-i18n="profile.personal">Личные данные</h2>
+                <div class="profile-name-row">
+                    <label class="field">
+                        <span data-i18n="profile.firstName">Имя</span>
+                        <input type="text" name="firstName" autocomplete="given-name">
+                    </label>
+                    <label class="field">
+                        <span data-i18n="profile.lastName">Фамилия</span>
+                        <input type="text" name="lastName" autocomplete="family-name">
+                    </label>
+                </div>
+                <label class="field profile-wide-field">
+                    <span data-i18n="profile.nickname">Никнейм</span>
+                    <input type="text" name="nickname" autocomplete="nickname">
+                </label>
+                <label class="field profile-wide-field">
+                    <span data-i18n="profile.email">Почта</span>
+                    <input type="email" name="email" readonly autocomplete="email">
+                </label>
+                <label class="field profile-wide-field">
+                    <span data-i18n="profile.birthday">Дата рождения</span>
+                    <input type="date" name="birthday" autocomplete="bday">
+                </label>
+                <h2 class="profile-subheading" data-i18n="profile.developer">О разработчике</h2>
+                <div class="profile-name-row">
+                    <label class="field">
+                        <span data-i18n="profile.focus">Направление</span>
+                        <select name="focus">
+                            <option value="" data-i18n="profile.focusSelect">Выберите направление</option>
+                            <option value="Frontend" data-i18n="role.frontend">Frontend</option>
+                            <option value="Backend" data-i18n="role.backend">Backend</option>
+                            <option value="Full-stack" data-i18n="role.fullstack">Full-stack</option>
+                            <option value="Мобильная разработка" data-i18n="role.mobile">Мобильная разработка</option>
+                            <option value="Дизайн" data-i18n="role.design">Дизайн</option>
+                            <option value="Другое" data-i18n="role.other">Другое</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span data-i18n="profile.experience">Опыт</span>
+                        <select name="experience">
+                            <option value="" data-i18n="profile.experienceSelect">Выберите уровень</option>
+                            <option value="Начинаю" data-i18n="experience.beginner">Начинаю</option>
+                            <option value="Учусь и практикуюсь" data-i18n="experience.learning">Учусь и практикуюсь</option>
+                            <option value="Работаю в разработке" data-i18n="experience.working">Работаю в разработке</option>
+                            <option value="Опытный специалист" data-i18n="experience.advanced">Опытный специалист</option>
+                        </select>
+                    </label>
+                </div>
+                <label class="field profile-wide-field">
+                    <span data-i18n="profile.project">Над чем сейчас работаете?</span>
+                    <input type="text" name="projectGoal" maxlength="160" placeholder="Например, личный сайт или API для приложения" data-i18n-placeholder="profile.projectPlaceholder">
+                </label>
+                <div class="security-section">
+                    <h3 data-i18n="profile.security">Безопасность</h3>
+                    <p data-i18n="profile.securityText">Для смены пароля отправим безопасную ссылку на почту аккаунта.</p>
+                    <button class="button button-secondary" type="button" data-password-reset data-i18n="profile.changePassword">Изменить пароль</button>
+                </div>
+                <button class="button button-primary" type="submit" data-i18n="profile.save">Сохранить изменения</button>
+                <p class="form-message" role="status" aria-live="polite"></p>
+            </form>
+            <p class="form-note" data-i18n="profile.saveNote">Изменения применяются только после сохранения.</p>
+        </main>
+    </div>
+    <script src="supabase-config.js"></script>
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

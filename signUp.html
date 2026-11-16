@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10384d">
+    <title>Регистрация — But|Leek</title>
+    <link rel="icon" href="iconb.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <main class="auth-layout">
+        <section class="auth-aside" aria-label="О But|Leek">
+            <a class="brand" href="main.html" draggable="false"><img class="brand-mark" src="iconb.jpeg" alt="" draggable="false">But|Leek</a>
+            <img class="auth-background-logo" src="logoB.jpeg" alt="" aria-hidden="true" draggable="false">
+            <h1>Меньше поиска.<br>Больше разработки.</h1>
+            <div class="auth-aside-footer">Библиотека инструментов для разработчиков</div>
+        </section>
+        <section class="auth-content">
+            <a class="back-link" href="main.html">На главную</a>
+            <div class="auth-form-wrap signup-form-wrap">
+                <h2>Создать аккаунт</h2>
+                <p>Сохраняйте находки и собирайте подборки.</p>
+                <form class="form-stack" data-auth="signup">
+                    <label class="field">
+                        <span>Электронная почта</span>
+                        <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                    </label>
+                    <div class="field-row">
+                        <label class="field">
+                            <span>Имя</span>
+                            <input type="text" name="firstName" placeholder="Ваше имя" autocomplete="given-name" required>
+                        </label>
+                        <label class="field">
+                            <span>Фамилия</span>
+                            <input type="text" name="lastName" placeholder="Ваша фамилия" autocomplete="family-name" required>
+                        </label>
+                    </div>
+                    <label class="field">
+                        <span>Никнейм</span>
+                        <input type="text" name="nickname" placeholder="developer" autocomplete="nickname" required>
+                    </label>
+                    <label class="field">
+                        <span>Дата рождения · необязательно</span>
+                        <input type="date" name="birthday" autocomplete="bday">
+                    </label>
+                    <label class="field">
+                        <span>Пароль</span>
+                        <input type="password" name="password" placeholder="Не менее 8 символов" autocomplete="new-password" minlength="8" required>
+                    </label>
+                    <p class="form-note">Мы используем почту для подтверждения регистрации и восстановления доступа.</p>
+                    <button class="button button-primary" type="submit">Создать аккаунт</button>
+                    <p class="auth-switch"><a href="index.html">Уже есть аккаунт? Войти</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="supabase-config.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

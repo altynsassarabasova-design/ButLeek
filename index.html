@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10384d">
+    <title>Вход — But|Leek</title>
+    <link rel="icon" href="iconb.jpeg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+    <main class="auth-layout">
+        <section class="auth-aside" aria-label="О But|Leek">
+            <a class="brand" href="main.html" draggable="false"><img class="brand-mark" src="iconb.jpeg" alt="" draggable="false">But|Leek</a>
+            <img class="auth-background-logo" src="logoB.jpeg" alt="" aria-hidden="true" draggable="false">
+            <h1>Меньше поиска.<br>Больше разработки.</h1>
+            <div class="auth-aside-footer">Библиотека инструментов для разработчиков</div>
+        </section>
+        <section class="auth-content">
+            <a class="back-link" href="main.html">На главную</a>
+            <div class="auth-form-wrap">
+                <h2>С возвращением</h2>
+                <p>Войдите, чтобы продолжить собирать свой стек.</p>
+                <form class="form-stack" data-auth="login">
+                    <label class="field">
+                        <span>Электронная почта</span>
+                        <input type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                    </label>
+                    <label class="field">
+                        <span>Пароль</span>
+                        <input type="password" name="password" placeholder="Введите пароль" autocomplete="current-password" required>
+                    </label>
+                    <div class="forgot-row"><a href="forgot-password.html">Забыли пароль?</a></div>
+                    <button class="button button-primary" type="submit">Войти</button>
+                    <p class="auth-switch">Нет аккаунта? <a href="signUp.html">Создать</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="supabase-config.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
